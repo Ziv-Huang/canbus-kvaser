@@ -1,0 +1,19 @@
+####################################
+READ can bus
+
+canlib.py can read can bus
+
+
+####################################
+WRITE can bus
+
+in the canlib.py can write can bus
+
+cl = canlib()
+ch1 = cl.openChannel(ch, canOPEN_ACCEPT_VIRTUAL)
+ch1.write(id_, msg, flag=0)
+
+e.g. 
+	id  : 0x040
+	msg : 11 22 03 FB 04 20 00 (send the example msg, if read msg like this format )
+	flag: maybe is one of the canMSG_xxx
